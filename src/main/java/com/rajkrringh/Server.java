@@ -98,8 +98,8 @@ public class Server {
   // Completes the security context initialisation and returns the client name.
   private String acceptSecurityContext( final byte[] serviceTicket)
       throws GSSException {
-    //krb5Oid = new Oid( "1.2.840.113554.1.2.2");
-    krb5Oid = new Oid( "1.2.840.113554.1.2.2.1");
+    krb5Oid = new Oid( "1.2.840.113554.1.2.2");
+    //krb5Oid = new Oid( "1.2.840.113554.1.2.2.1");
     // Accept the context and return the client principal name.
     return Subject.doAs( subject, new PrivilegedAction<String>() {
       public String run() {
